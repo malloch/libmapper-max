@@ -47,10 +47,10 @@ else
         echo liblo already downloaded
     else
         echo downloading liblo...
-        curl -L -O https://downloads.sourceforge.net/project/liblo/liblo/0.31/liblo-0.31.tar.gz
-        tar -xzf liblo-0.31.tar.gz
-        rm liblo-0.31.tar.gz
-        mv liblo-0.31 liblo
+        curl -L -O https://downloads.sourceforge.net/project/liblo/liblo/0.32/liblo-0.32.tar.gz
+        tar -xzf liblo-0.32.tar.gz
+        rm liblo-0.32.tar.gz
+        mv liblo-0.32 liblo
     fi
     cd ./liblo
     echo build liblo: arm
@@ -91,10 +91,10 @@ else
         echo libmapper already downloaded
     else
         echo downloading libmapper...
-        curl -L -O https://github.com/libmapper/libmapper/archive/refs/tags/2.4.4.tar.gz
-        tar -xzf 2.4.4.tar.gz
-        rm 2.4.4.tar.gz
-        mv libmapper-2.4.4 libmapper
+        curl -L -O https://github.com/libmapper/libmapper/archive/refs/tags/2.4.8.tar.gz
+        tar -xzf 2.4.8.tar.gz
+        rm 2.4.8.tar.gz
+        mv libmapper-2.4.8 libmapper
     fi
     cd libmapper
     echo building libmapper: arm
