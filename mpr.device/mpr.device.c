@@ -628,7 +628,7 @@ static void mpr_device_sig_handler(mpr_sig sig, mpr_sig_evt evt, mpr_id inst, in
                     atom_set_string(x->buffer, "overflow");
                     // send overflow message to all instances
                     for (int i = 0; i < ptrs->num_objs; i++)
-                        outlet_list(ptrs->objs[i]->o_outlet, NULL, 2, x->buffer);
+                        outlet_list(ptrs->objs[i]->o_outlet, NULL, 1, x->buffer);
                     break;
                 default:
                     break;
