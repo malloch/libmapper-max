@@ -201,6 +201,17 @@ static void *mpr_in_new(t_symbol *s, int argc, t_atom *argv)
         else
             x->buffer.floats = (float*)malloc(x->sig_length * sizeof(float));
 
+        // preview arguments in case the 'thru' attribute is present
+        for (int j = i; j < argc; j++) {
+            char *prop_name, type = (argv + j)->a_type;
+            if (type != A_SYM) {
+                prop_name = atom_getsym(argv + j)->s_name;
+                if (strcmp(prop_name, "thru") == 0 && (type == A_LONG || type == A_FLOAT)) {
+                    x->thru = atom_coerce_int(argv + i);
+                }
+            }
+        }
+
         // we need to cache any arguments to add later
         x->args = atomarray_new(argc - i, argv + i);
 
