@@ -69,9 +69,9 @@ static void oscmulticast_interface(t_oscmulticast *x, t_symbol *s, int argc, t_a
 static void oscmulticast_anything(t_oscmulticast *x, t_symbol *s, int argc, t_atom *argv);
 static void oscmulticast_poll(t_oscmulticast *x);
 static int multicast_handler(const char *path, const char *types, lo_arg ** argv,
-                             int argc, void *data, void *user_data);
+                             int argc, lo_message msg, void *user_data);
 static int reply_handler(const char *path, const char *types, lo_arg ** argv,
-                         int argc, void *data, void *user_data);
+                         int argc, lo_message msg, void *user_data);
 #ifdef MAXMSP
 	static void oscmulticast_assist(t_oscmulticast *x, void *b, long m, long a, char *s);
 #endif
@@ -306,8 +306,7 @@ void startup(t_oscmulticast *x)
     /* Specify the interface to use for multicasting */
     lo_address_set_iface(x->address, x->iface, 0);
 
-    x->servers[0] = lo_server_new_multicast_iface(x->group, x->port, x->iface, 0,
-                                                 handler_error);
+    x->servers[0] = lo_server_new_multicast_iface(x->group, x->port, x->iface, 0, handler_error);
 
     if (!x->servers[0]) {
         post("oscmulticast: could not create multicast server");
