@@ -9,7 +9,7 @@ jobs:
       CC: clang
       CXX: clang++
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - name: install dependencies
@@ -18,7 +18,7 @@ jobs:
     - name: build externals
       run:
         ./macos_build.sh
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: max-pd-externals-macosx
         path: dist
@@ -26,17 +26,17 @@ jobs:
   Windows-Latest:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - name: build externals
       run:
         ./windows_build.ps1
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: max-package-win64
         path: dist/max-8/
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: pd-package-win64
         path: dist/pure-data/

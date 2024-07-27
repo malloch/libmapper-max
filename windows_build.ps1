@@ -58,7 +58,7 @@ cmake --build . --target all_build
 cd $scriptDir
 cp ./AUTHORS ./dist/
 cp ./COPYING ./dist/
-cp ./README ./dist/
+cp ./README.markdown ./dist/readme.md
 cp ./maxdist/mpr-objectmappings.txt ./dist/max-8/Mapper/init/
 cp ./maxdist/package-info.json ./dist/max-8/Mapper/
 cp ./maxdist/examples/* ./dist/max-8/Mapper/examples/
