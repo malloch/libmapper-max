@@ -23,11 +23,11 @@
 ,
 	"package_extra" : 	{
 		"reverse_domain" : "org.libmapper",
-		"copyright" : "Copyright (c) 2023 libmapper"
+		"copyright" : "Copyright (c) 2024 libmapper"
 	}
 ,
 	"tags" : ["framework", "interaction", "networking", "mapping", "OSC"],
-	"version" : "2.4.4b",
+	"version" : "2.4.9",
 	"website" : "https://libmapper.org",
 	"filelist" : 	{
         "examples" : ["instanced_pwm.maxpat", "instanced_sliders.maxpat"],

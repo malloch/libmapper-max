@@ -1,5 +1,15 @@
 # News
 
+## version 2.4.9
+
+Released 9 August 2024
+
+This release is built against libmapper version 2.4.9 and liblo version 0.32. It also includes the following improvements:
+
+- The `mpr.in` external now previews arguments to check for the `thru` attribute so that is can be activated before the object is registered with a parent device.
+- The instance `overflow` message now has the correct number of arguments (none).
+- A fix for inconsistent handler arguments in `oscmulticast`
+
 ## Version 2.4.4b
 
 Released 11 October 2023

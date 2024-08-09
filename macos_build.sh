@@ -91,10 +91,10 @@ else
         echo libmapper already downloaded
     else
         echo downloading libmapper...
-        curl -L -O https://github.com/libmapper/libmapper/archive/refs/tags/2.4.8.tar.gz
-        tar -xzf 2.4.8.tar.gz
-        rm 2.4.8.tar.gz
-        mv libmapper-2.4.8 libmapper
+        curl -L -O https://github.com/libmapper/libmapper/archive/refs/tags/2.4.9.tar.gz
+        tar -xzf 2.4.9.tar.gz
+        rm 2.4.9.tar.gz
+        mv libmapper-2.4.9 libmapper
     fi
     cd libmapper
     echo building libmapper: arm
